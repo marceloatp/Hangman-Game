@@ -1,0 +1,3 @@
+﻿  Hangman Game.cpp
+C:\Users\marce\Desktop\Ambiente de trabalho\Projetos\Hangman Game\Hangman Game\Hangman Game.cpp(54,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Hangman Game.vcxproj -> C:\Users\marce\Desktop\Ambiente de trabalho\Projetos\Hangman Game\x64\Debug\Hangman Game.exe
