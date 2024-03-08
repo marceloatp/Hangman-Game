@@ -45,10 +45,20 @@ void showStatus(string hideWord, int wordSize, int maxTries, int tries, string t
 	}
 
 }
-int static singlePlayer() {
+int Play(int numPlayers) {
 
+	//
 	//word to discover
-	string word = returnRandomWord();
+	string word;
+	if (numPlayers == 1) {
+		
+		 word = returnRandomWord();
+	}
+	else {
+		cout << "\n Write a word\n";
+		cin >> word;
+	}
+
 
 	//size of the word
 	int wordSize = word.size();
@@ -148,9 +158,10 @@ void mainMenu() {
 	{
 		cleanScreen();
 		cout << "Welcome to HangMan Game";
-		cout << "\n1 - Play";
-		cout << "\n2 - About";
-		cout << "\n3 - Quit";
+		cout << "\n1 - SinglePlayer";
+		cout << "\n2 - MultyPlayer";
+		cout << "\n3 - About";
+		cout << "\n4 - Quit";
 		cout << "\n Select a option an press Enter: \n";
 
 		cin >> option;
@@ -160,17 +171,29 @@ void mainMenu() {
 		{
 		case 1:
 			//Iniciar o jogo
-			if (singlePlayer() == 1) {
+			if (Play(1) == 1) {
 				mainMenu();
 			};
 			break;
 		case 2:
-			cleanScreen();
-			cout << "Made By Marcelo Pereira";
+			//Iniciar o jogo
+			if (Play(2) == 1) {
+				mainMenu();
+			};
 			break;
 		case 3:
+			cleanScreen();
+			cout << "Made By Marcelo Pereira 2024";
+			cout << "\n1 - Main Menu";
+			cout << "\n2 - Quit\n";
+			cin >> option;
+			if (option == 1) {
+				mainMenu();
+			}
 			break;
-
+		case 4:
+			cout << "See you later!\n";
+			break;
 		}
 		
 	}
